@@ -1,0 +1,351 @@
+html
+{
+    margin: 0%;
+    min-width: 820px;
+}
+
+body
+{
+    margin: 0%;
+    min-width: 720px;
+}
+
+
+/* Header  */
+
+.header
+{   
+    margin: 0px;
+    padding: 10px;
+
+    
+
+    border: 1px solid white;
+    
+    /* Design Template  */
+    text-align: center;
+    color: white;
+    background-color: #552E8C;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Super Container Element parent of all except Header and body  */
+.supercontainer
+{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0%;
+
+    border: 1px solid black;
+    
+}
+
+
+
+
+
+/* Menu  */
+.container
+{
+    display: flex;
+    flex-direction: column;
+
+    height: calc(100vh - 58.5px);
+    overflow: auto;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    
+    /* Design Template  */
+    background-color: #7E84F2;
+    border: 1px solid black;
+
+    /* Animation */
+    transition: 0.3s;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.container::-webkit-scrollbar {
+    display: none;
+  }
+    
+
+.element
+{
+    margin: 0%;
+    width: 280px;
+    margin: 10px;
+    
+    /* Design Template  */
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.sub-header
+{
+    padding: 5px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    
+    /* Design Template  */
+    font-size: 20px;
+    color : white;
+    background-color: #552E8C;
+    text-align: center;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+}
+
+.element table
+{
+    width: 100%;
+    padding: 5px;
+
+    /* Design Template  */
+    font-size: 15px;
+    color: #552E8C;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.element td
+{
+    padding: 5px;
+    text-align: right;
+}
+
+.element input
+{
+    width: 96%;
+}
+
+.element td input
+{
+    padding: 5px;
+    
+    /* Design Template */
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid #552E8C;
+    background-color: whitesmoke;
+    color: #552E8C;
+
+}
+
+.element td input:hover
+{
+    border: 2px solid #552E8C;
+    border-radius: 5px;
+}
+
+.element select 
+{
+    width: 100%;
+    padding: 5px;
+
+    border: 1px solid  #552E8C;
+    border-radius: 5px;
+    color: #552E8C;
+    outline: none;
+}
+
+.element select:hover
+{
+    border: 2px solid  #552E8C;
+
+}
+
+
+.element td input:hover
+{
+    border: 2px solid #552E8C;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px black;
+}
+
+
+.element-footer
+{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.element-footer button
+{
+    width: 75px;
+    
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0px solid ;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px #552E8C;
+    border: 1px solid #552E8C;
+    color: #552E8C; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold
+}
+
+.element-footer button:hover
+{
+    cursor: pointer;
+    
+    zoom: 1.1;
+    color: white;
+    background-color: #552E8C;
+    box-shadow: 2px 2px 4px black;
+}
+
+
+/* Dashboar  */
+.dashboard
+{
+    
+    width: calc(100% - 300px);
+    height: calc(100vh - 58.5px);
+    display: flex;
+    flex-direction: column;
+    overflow:auto;
+
+    border: 1px solid black;
+
+}
+
+/* Top Menu bar  */
+.menu
+{
+    border: 1px solid white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+
+    /* Design Templates */
+    background-color: #0D0D0D;
+
+}
+
+/* Menu buttons  */
+.menubar
+{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menubar button
+{
+    margin: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    /* Design Template */
+    width: 75px;
+    color: white;
+    background-color: black;
+    border: 0px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menubar button:hover
+{
+    border: 1px solid white;
+    box-shadow: 1.5px 1.5px 2px white;
+    zoom: 1.1;
+}
+
+#menu-emoji
+{
+    width: 30px;
+    padding: 5px;
+}
+
+
+/* Search Box  */
+.search
+{
+    border: 1px solid black;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+
+    /* Design Templates */
+    background-color: white;
+    border-radius: 3px;
+}
+.search-emoji
+{
+    padding: 5px;
+    color: #0D0D0D;
+}
+.search-box input
+{
+    height: 25px;
+    outline: none;
+    border: 0px;
+
+    /* Design Templates */
+    color: #0D0D0D;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Table Display  */
+.table
+{
+    border: 1px solid black;
+    height: 100%;
+
+    /* Design Template */
+    background-color: #d3d4f9;
+}
+
+
+/* Table Display  */
+.table
+{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    display: inline-block;
+
+    /* Design Template */
+    background-color: #d3d4f9;
+    border: 1px solid black;
+    font-size: small;
+
+}
+
+
+
+
+.table table
+{
+    border-collapse: collapse;
+    background-color: white;
+    white-space:nowrap;
+}
+
+.table th
+{
+    background-color: #0477BF;
+    color: white;
+    border: 2px solid black;
+    padding: 8px;
+}
+
+.table td
+{
+    border: 2px solid black;
+    padding: 8px;
+}

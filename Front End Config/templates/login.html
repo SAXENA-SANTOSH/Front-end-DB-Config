@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Login</title>
+    <style>
+        .failed
+        {
+            text-align: center;
+            display: block;
+            font-size: 12px;
+            color: red;
+            margin: 5px;
+        }
+
+        .success
+        {
+            text-align: center;
+            display: block;
+            font-size: 12px;
+            color: blue;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+        <!-- Header  -->
+        <div class="header">
+            <h1>
+                MySql Configurations
+            </h1>      
+        </div>
+
+        <!-- Super Container Parent to all element except body and header -->
+        <div class="supercontainer">
+            <div class="container">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="/static/Images/bhealth-purple-white.png" alt="">    
+                </div>
+
+                <!-- Run time message  -->
+                {% for message in get_flashed_messages() %}
+                    <div class = '{{ type }}'>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+
+                <!-- Login -->
+                <form action="/login" method="post">
+                    <div class="input">
+                        <table>
+                            <tr>
+                                <td class="question">
+                                    Username
+                                </td>
+                                <td class="space">
+                                    :
+                                </td>
+                                <td class="answer">
+                                    <div class="answercontainer">
+                                        <div class="emoji">
+                                            <i class="fa-solid fa-user" style="color: #552E8C;"></i>
+                                        </div>
+                                        <input type="text" name="email" id="" placeholder="Username">
+                                    </div> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="question">
+                                    Password
+                                </td>
+                                <td class="space">
+                                    :
+                                </td>
+                                <td class="answer">
+                                    <div class="answercontainer">
+                                        <div class="emoji">
+                                            <i class="fa-solid fa-lock" style="color: #552E8C;"></i>
+                                        </div>
+                                        <input type="password" name="password" id="" placeholder="Password">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="buttons">
+                        <button>
+                            Clear
+                        </button>
+                        <button>
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="forgot-password">
+                        Forgot Password? &nbsp;&nbsp; <a style="text-decoration:none" href="/forgot_password">Click here</a>
+                    </div>
+
+                    <div class="signup">
+                        Don't have an account? &nbsp;&nbsp; <a style="text-decoration:none" href="/registration">Sign up</a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+</body>
+</html>

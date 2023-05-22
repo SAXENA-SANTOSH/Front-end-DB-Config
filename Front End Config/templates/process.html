@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/process.css">
+    <title>Process</title>
+</head>
+<body>
+    <h1 class="header">
+        MySql Configurations
+    </h1>
+    <h1 class="element" style="text-align: center; font-size: 20px;">
+        {{process}}
+    </h1>   
+    <form action="/process_entry/{{token}}" , method="post">
+        <div hidden> 
+            <select class = 'input_box' name="table_name" id="">
+                <option value="{{table_name}}">{{table_name}}</option>
+            </select>
+            <select class = 'input_box' name="process_name" id="">
+                <option value="{{process}}"> {{process}}</option>
+            </select>
+        </div>
+        {% for i in range(0, count) %}
+            <div class="element">
+                <div class="comment">
+                    {{ i+1 }}. {{ comments[i] }}
+                </div>
+                {{ schema[i] }} : 
+                
+                {% if options[i] == '': %}  
+                    <input type="text" name="{{ schema[i] }}" id="" placeholder="{{ schema[i] }}" required>
+                {% else %}               
+                    <select class = 'input_box' name="{{ schema[i] }}" id="">
+                        {% for name in  options[i] %}
+                            <option value="{{name}}">{{name}}</option>
+                        {% endfor %}
+                    </select>
+                
+                {% endif %}
+            </div>
+        {% endfor %}
+        <div class="button">    
+            <button type="reset">
+                Clear
+            </button>
+            <button type="submit">
+                Submit
+            </button>
+        </div>    
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/sql_editor.css">
+    <title>Sql Editor</title>
+</head>
+<body>
+    <h1 class="header">
+        MySql Configurations
+    </h1>
+    <form action="/sql_editor_object/{{token}}" method="post"> 
+        <div class="menu">
+            <div class="menubar">
+                <div class="text"> 
+                    Table Name : 
+                </div>
+                <select class = 'input_box' name="table_name" id="">
+                    {% for name in objects %}
+                        <option value="{{ name }}">{{ name }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <form action="/sql_query/{{token}}" method="post">
+        
+        <textarea class = 'input_box' name="query" id="" cols="30" rows="10" placeholder="Query">{{query}}</textarea>
+        <div class="button">
+            <button type="reset">Clear</button>
+            <button type="submit">Submit</button>
+
+        </div>
+    </form>
+
+</body>
+</html>
